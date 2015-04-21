@@ -46,5 +46,6 @@ set laststatus=2
 set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 
 autocmd FileType python setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
-autocmd FileType html set tabstop=2 shiftwidth=2 softtabstop=2 expandtab 
+autocmd FileType html setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab 
+autocmd Filetype changes setlocal tw=67
 
