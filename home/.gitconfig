@@ -16,3 +16,7 @@
 	ci = commit
 	b = branch
 	l = log --graph --decorate
+	p = pull
+	pu = push
+	puf = push -f
+
