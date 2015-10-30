@@ -1,0 +1,17 @@
+alias dir='ls -lhaF'
+alias ll='ls -lF'
+alias la='ls -aF'
+alias lla='ls -laF'
+alias lh='ls -hF'
+alias llh='ls -lhF'
+
+alias lz='unzip -l $*'
+
+alias dd="dd bs=4M"
+alias flush_diskcaches='sync ; sudo sh -c "echo 3 > /proc/sys/vm/drop_caches"'
+
+alias rpmqd="rpm -qa --queryformat '%{installtime} %{installtime:date}\t%{name}-%{version}-%{release}\n' | sort -nr +1 | sed -e 's/^[^ ]* //'"
+
+alias wget-docstruct='wget -r -k -p -np -nv'
+
+

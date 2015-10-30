@@ -9,14 +9,15 @@
 	default = simple
 [alias]
 	s = status
+	l = log --graph --decorate
+	b = branch --color
 	d = diff
 	dw = diff -w
 	ds = diff --staged
 	co = checkout
 	ci = commit
-	b = branch
-	l = log --graph --decorate
-	p = pull
+	cia = commit --amend
+	p = pull --prune
 	pu = push
-	puf = push -f
+	puf = push --force
 
