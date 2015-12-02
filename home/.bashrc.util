@@ -11,6 +11,7 @@ alias dd="dd bs=4M"
 alias flush_diskcaches='sync ; sudo sh -c "echo 3 > /proc/sys/vm/drop_caches"'
 
 alias rpmqd="rpm -qa --queryformat '%{installtime} %{installtime:date}\t%{name}-%{version}-%{release}\n' | sort -nr +1 | sed -e 's/^[^ ]* //'"
+alias rpmdisturl='rpm -q --qf "%{disturl}\n"'
 
 alias wget-docstruct='wget -r -k -p -np -nv'
 

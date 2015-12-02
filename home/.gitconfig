@@ -13,7 +13,7 @@
 	b = branch --color
 	d = diff
 	dw = diff -w
-	ds = diff --staged
+	ds = diff --staged -w
 	co = checkout
 	ci = commit
 	cia = commit --amend
