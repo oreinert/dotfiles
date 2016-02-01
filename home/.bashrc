@@ -1,6 +1,6 @@
 # Common .bashrc (for openSUSE Linux)
 
-umask 0027
+umask 0022
 
 # git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 if [[ -d $HOME/.config/base16-shell && ! "$WINDOWMANAGER" =~ gnome ]]; then
@@ -13,12 +13,13 @@ fi
 source /usr/share/homeshick/homeshick.sh
 source /usr/share/homeshick/completions/homeshick-completion.bash
 
-homeshick refresh 2 --quiet
+homeshick refresh 4 --quiet
 
 #----------------------------------------------------------------------
 
 export EDITOR=/usr/bin/vim
 export PYTHONPATH=$HOME/bin/python
+export CDPATH+=/run/media/$USER
 
 #----------------------------------------------------------------------
 

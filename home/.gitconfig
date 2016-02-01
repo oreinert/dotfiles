@@ -20,4 +20,4 @@
 	p = pull --prune
 	pu = push
 	puf = push --force
-
+	forget = rm --cached
