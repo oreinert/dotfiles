@@ -18,8 +18,8 @@ homeshick refresh 4 --quiet
 #----------------------------------------------------------------------
 
 export EDITOR=/usr/bin/vim
-export PYTHONPATH=$HOME/bin/python
-export CDPATH+=/run/media/$USER
+export PYTHONPATH+=${PYTHONPATH:+:}$HOME/bin/python
+export CDPATH+=${CDPATH:+:}/run/media/$USER
 
 #----------------------------------------------------------------------
 
