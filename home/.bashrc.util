@@ -15,6 +15,7 @@ alias rpmdisturl='rpm -q --qf "%{disturl}\n"'
 
 alias wget-docstruct='wget -r -k -p -np -nv'
 
-alias certdump="openssl x509 -text -noout -certopt no_pubkey,no_sigdump -in"
-alias reqdump="openssl req -text -noout -reqopt no_pubkey,no_sigdump -in"
+alias catcert="openssl x509 -text -noout -certopt no_pubkey,no_sigdump -in"
+alias catreq="openssl req -text -noout -reqopt no_pubkey,no_sigdump -in"
+#alias catcrl="..."
 
