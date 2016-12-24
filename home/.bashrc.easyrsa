@@ -1,0 +1,7 @@
+if [ -d $HOME/bin/easy-rsa ]; then
+    export EASYRSA="$HOME/bin/easy-rsa/easyrsa3"
+    export EASYRSA_PKI="./pki"
+
+    alias easyrsa="$EASYRSA/easyrsa"
+fi
+
