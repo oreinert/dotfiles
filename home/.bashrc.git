@@ -21,6 +21,8 @@ alias gs="git status"
 
 alias gd="git diff"
 
+alias gr="git remote -v"
+
 # git log
 alias gg='git log --graph --decorate --date=relative --color --format="%C(yellow)%h%C(reset) %C(green)(%ar)%C(reset) %C(white)%s%C(reset) %C(blue)- %an%C(reset)%C(yellow)%d%C(reset)"'
 alias gl='git log --color --decorate --graph'
