@@ -10,30 +10,29 @@ fi
 
 #----------------------------------------------------------------------
 
-source /usr/share/homeshick/homeshick.sh
-source /usr/share/homeshick/completions/homeshick-completion.bash
-
-homeshick refresh 4 --quiet
-
-#----------------------------------------------------------------------
-
 export EDITOR=/usr/bin/vim
 export PYTHONPATH+=${PYTHONPATH:+:}$HOME/bin/python
 export CDPATH+=${CDPATH:+:}/run/media/$USER
 
 #----------------------------------------------------------------------
 
-for RC_FILE in $HOME/.bashrc.*; do
-	source "$RC_FILE"
-done
+if [[ "$-" =~ i ]]; then
+    source /usr/share/homeshick/homeshick.sh
+    source /usr/share/homeshick/completions/homeshick-completion.bash
 
-if [ -f ~/.extras ]; then
-	source ~/.extras
-fi
-if [ -f ~/.secrets ]; then
-	source ~/.secrets
-fi
-if [ -f ~/.alias ]; then
-	source ~/.alias
-fi
+    homeshick refresh 4 --quiet
 
+    for RC_FILE in $HOME/.bashrc.*; do
+        source "$RC_FILE"
+    done
+
+    if [ -f ~/.extras ]; then
+        source ~/.extras
+    fi
+    if [ -f ~/.secrets ]; then
+        source ~/.secrets
+    fi
+    if [ -f ~/.alias ]; then
+        source ~/.alias
+    fi
+fi
