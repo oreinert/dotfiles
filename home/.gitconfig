@@ -2,9 +2,6 @@
 	name = Olav Reinert
 	email = seroton10@gmail.com
 	signingkey = C2E0FEEF
-[github]
-        user = oreinert
-        token = b6d5fdc702aad3403a2244bdfc8e808c
 [push]
 	default = simple
 [alias]
@@ -21,3 +18,5 @@
 	pu = push
 	puf = push --force
 	forget = rm --cached
+[include]
+    path = .gitconfig.local
