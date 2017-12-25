@@ -18,4 +18,4 @@ alias wget-docstruct='wget -r -k -p -np -nv'
 alias catcert="openssl x509 -text -noout -certopt no_pubkey,no_sigdump -in"
 alias catreq="openssl req -text -noout -reqopt no_pubkey,no_sigdump -in"
 #alias catcrl="..."
-
+alias catp12="openssl pkcs12 -info -in"
