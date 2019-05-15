@@ -13,7 +13,7 @@
 	ds = diff --staged -w
 	co = checkout
 	ci = commit -v
-	cia = commit --amend
+	cia = commit --amend --no-edit
 	p = pull --prune
 	pu = push
 	puf = push --force
