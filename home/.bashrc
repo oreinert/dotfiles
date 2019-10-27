@@ -22,7 +22,7 @@ if [[ "$-" =~ i ]]; then
 
     homeshick refresh 4 --quiet
 
-    for RC_FILE in $HOME/.bashrc.*; do
+    for RC_FILE in $HOME/.config/bash/*; do
         source "$RC_FILE"
     done
 
