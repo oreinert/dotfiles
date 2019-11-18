@@ -1,22 +1,23 @@
 [user]
-	name = Olav Reinert
-	email = seroton10@gmail.com
-	signingkey = C2E0FEEF
+    name = Olav Reinert
+    email = seroton10@gmail.com
+    signingkey = C2E0FEEF
 [push]
-	default = simple
+    default = simple
 [alias]
-	s = status
+    s = status
     sh = show
-	l = log --graph --decorate
-	b = branch --color
-	d = diff -w
-	ds = diff --staged -w
-	co = checkout
-	ci = commit -v
-	cia = commit --amend --no-edit
-	p = pull --prune
-	pu = push
-	puf = push --force
-	forget = rm --cached
+    l = log --graph --decorate
+    b = branch --color
+    d = diff -w
+    ds = diff --staged -w
+    co = checkout
+    ci = commit -v
+    cia = commit --amend --no-edit
+    p = pull --prune
+    pu = push
+    puf = push --force
+    forget = rm --cached
+    rim = rebase -i master
 [include]
     path = .gitconfig.local
