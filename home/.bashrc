@@ -22,17 +22,15 @@ if [[ "$-" =~ i ]]; then
 
     homeshick refresh 4 --quiet
 
+    if [ -f ~/.alias ]; then
+        source ~/.alias
+    fi
+
     for RC_FILE in $HOME/.config/bash/*; do
         source "$RC_FILE"
     done
 
-    if [ -f ~/.extras ]; then
-        source ~/.extras
-    fi
-    if [ -f ~/.secrets ]; then
+    if [ -f ~/.config/secrets ]; then
         source ~/.secrets
-    fi
-    if [ -f ~/.alias ]; then
-        source ~/.alias
     fi
 fi
