@@ -42,8 +42,11 @@ filetype indent on
 syntax on
 let vimclojure#HighlightBuiltins = 1
 
-set laststatus=2
+" this statusline is used unless powerline is installed
 set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+
+set laststatus=2
+set modeline
 
 set tabstop=4
 set shiftwidth=4
