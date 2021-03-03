@@ -21,3 +21,5 @@
     rim = rebase -i master
 [include]
     path = .gitconfig.local
+[pull]
+	rebase = true
