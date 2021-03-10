@@ -23,3 +23,5 @@
     path = .gitconfig.local
 [pull]
 	rebase = true
+[init]
+	defaultBranch = master
