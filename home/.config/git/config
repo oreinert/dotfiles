@@ -5,20 +5,23 @@
 [push]
     default = simple
 [alias]
-    s = status
-    sh = show
-    l = log --graph --decorate
     b = branch --color
-    d = diff -w
-    ds = diff --staged -w
-    co = checkout
     ci = commit -v
     cia = commit --amend --no-edit
+    co = checkout
+    d = diff -w
+    ds = diff --staged -w
+    forget = rm --cached
+    l = log --graph --decorate
     p = pull --prune
     pu = push
     puf = push --force
-    forget = rm --cached
+    pun = !git push --set-upstream origin $(git symbolic-ref -q --short ${1:-HEAD})
+    rc = rebase --continue
     rim = rebase -i master
+    s = status
+    sh = show -w
+    sl = show --name-only
 [include]
     path = .gitconfig.local
 [pull]
