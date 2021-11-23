@@ -1,6 +1,13 @@
-source /usr/share/homeshick/homeshick.sh
-source /usr/share/homeshick/completions/homeshick-completion.bash
+if [ -d /usr/share/homeshick ]; then
+    HOMESHICK_DIR=/usr/share/homeshick
+elif [ -d ~/.homesick/repos/homeshick ]; then
+    HOMESHICK_DIR=~/.homesick/repos/homeshick
+fi
 
-homeshick refresh 4 --quiet
+if [ -n "$HOMESHICK_DIR" ]; then
+    source $HOMESHICK_DIR/homeshick.sh
+    source $HOMESHICK_DIR/completions/homeshick-completion.bash
 
+    homeshick refresh 4 --quiet
+fi
 
