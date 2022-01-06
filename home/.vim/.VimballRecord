@@ -1,1 +1,0 @@
-csv-0.22.vmb: call delete('/ssd/olav/.vim/ftplugin/csv.vim')|call delete('/ssd/olav/.vim/doc/ft-csv.txt')|call delete('/ssd/olav/.vim/syntax/csv.vim')|call delete('/ssd/olav/.vim/ftdetect/csv.vim')|call delete('/ssd/olav/.vim/plugin/csv.vim')
