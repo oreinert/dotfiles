@@ -2,6 +2,12 @@
     name = Olav Reinert
     email = seroton10@gmail.com
     signingkey = C2E0FEEF
+[sendemail]
+    suppressCc = all
+    smtpEncryption = tls
+    smtpServer = smtp.gmail.com
+    smtpUser = seroton10@gmail.com
+    smtpServerPort = 587
 [push]
     default = simple
 [alias]
