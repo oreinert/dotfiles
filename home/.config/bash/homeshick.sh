@@ -8,6 +8,6 @@ if [ -n "$HOMESHICK_DIR" ]; then
     source $HOMESHICK_DIR/homeshick.sh
     source $HOMESHICK_DIR/completions/homeshick-completion.bash
 
-    homeshick refresh 4 --quiet
+    echo 'y' | homeshick refresh 4 --quiet
 fi
 
