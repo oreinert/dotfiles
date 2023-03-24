@@ -1,5 +1,7 @@
 # .bashrc settings for Git
 
+source /usr/share/bash-completion/completions/git
+
 function g {
     if [[ $# > 0 ]]; then
         git $@
@@ -7,6 +9,8 @@ function g {
         git status --short --branch
     fi
 }
+
+__git_complete g _git_main
 
 function ga {
     if [[ $# > 0 ]]; then
