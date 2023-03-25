@@ -29,7 +29,8 @@ alias gr="git remote -v"
 
 # git log
 alias gg='git log --graph --decorate --date=relative --color --format="%C(yellow)%h%C(reset) %C(green)(%ar)%C(reset) %C(white)%s%C(reset) %C(blue)- %an%C(reset)%C(yellow)%d%C(reset)"'
-alias gl='git log --color --decorate --graph'
+alias gl='git log $(git merge-base master HEAD)..HEAD'
+alias glg='git log --color --decorate --graph'
 alias gls='git log --color --decorate --graph --name-status'
 
 # git-push-new (branch)
