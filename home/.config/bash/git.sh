@@ -27,15 +27,29 @@ alias gd="git diff"
 
 alias gr="git remote -v"
 
-# git log
+# log
 alias gg='git log --graph --decorate --date=relative --color --format="%C(yellow)%h%C(reset) %C(green)(%ar)%C(reset) %C(white)%s%C(reset) %C(blue)- %an%C(reset)%C(yellow)%d%C(reset)"'
 alias ggg='git log --color --decorate --graph'
 alias gls='git log --color --decorate --graph --name-status'
 
-# log commits on (non-master) branch
+# (non-master) branch log
 function gl {
-    local head="${1:-HEAD}"
-    git log $(git merge-base master "$head").."$head"
+    if git rev-parse --quiet --verify "${!#}" >/dev/null; then
+        local head="${!#}"
+        git log "${@:1:$#-1}" $(git merge-base master "$head").."$head"
+    else
+        git log "${@}" $(git merge-base master HEAD)..HEAD
+    fi
+}
+
+# (non-master) branch diff
+function gld {
+    if git rev-parse --quiet --verify "${!#}" >/dev/null; then
+        local head="${!#}"
+        git diff "${@:1:$#-1}" $(git merge-base master "$head").."$head"
+    else
+        git diff "${@}" $(git merge-base master HEAD)..HEAD
+    fi
 }
 
 # git-push-new (branch)
