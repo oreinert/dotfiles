@@ -1,6 +1,10 @@
 # .bashrc settings for Git
 
-source /usr/share/bash-completion/completions/git
+if [ -r /etc/bash_completion.d/git.sh ]; then
+    source /etc/bash_completion.d/git.sh
+elif [ -r /usr/share/bash-completion/completions/git ]; then
+    source /usr/share/bash-completion/completions/git
+fi
 
 function g {
     if [[ $# > 0 ]]; then
@@ -54,14 +58,14 @@ function gld {
 
 # git-push-new (branch)
 alias gpn='git push --set-upstream origin $(git symbolic-ref -q --short ${1:-HEAD})'
- 
+
 # git branch done
 function gbd {
     local BRANCH_NAME=$(git symbolic-ref -q --short HEAD)
     git checkout ${1:-develop} && \
-    git pull && \
-    git branch -d "$BRANCH_NAME"
-}
- 
+        git pull && \
+        git branch -d "$BRANCH_NAME"
+    }
+
 # git graph
 
