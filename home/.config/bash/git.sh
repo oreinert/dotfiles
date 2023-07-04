@@ -40,9 +40,9 @@ alias gls='git log --color --decorate --graph --name-status'
 function gl {
     if git rev-parse --quiet --verify "${!#}" >/dev/null; then
         local head="${!#}"
-        git log "${@:1:$#-1}" $(git merge-base master "$head").."$head"
+        git --no-pager log "${@:1:$#-1}" $(git merge-base master "$head").."$head"
     else
-        git log "${@}" $(git merge-base master HEAD)..HEAD
+        git --no-pager log "${@}" $(git merge-base master HEAD)..HEAD
     fi
 }
 
