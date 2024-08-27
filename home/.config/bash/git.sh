@@ -62,7 +62,7 @@ alias gpn='git push --set-upstream origin $(git symbolic-ref -q --short ${1:-HEA
 # git branch done
 function gbd {
     local BRANCH_NAME=$(git symbolic-ref -q --short HEAD)
-    git checkout ${1:-develop} && \
+    git checkout ${1:-master} && \
         git pull && \
         git branch -d "$BRANCH_NAME"
     }
