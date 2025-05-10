@@ -19,6 +19,7 @@
     ds = diff --staged -w
     forget = rm --cached
     l = log --graph --decorate
+    ll = ls-tree -r master --name-only
     p = pull --prune
     pu = push
     puf = push --force
