@@ -37,6 +37,5 @@ function show_jobs {
     fi
 }
 
-PS1="\$(show_rc \$?)${_nblue}\t${_sgr0} · \u@\h$(show_distrobox) · \w\$(show_git_branch)\$(show_jobs)\n\$$_sgr0 "
-
+PS1="\$(show_rc \$?)${_nblue}\t${_sgr0} · \u@\h$(show_distrobox) · \w\$(show_git_branch)\$(show_jobs)$_sgr0\n\$ "
 
