@@ -5,6 +5,7 @@ _nblue="$(tput setaf 4 2> /dev/null)"
 _nmagenta="$(tput setaf 5 2> /dev/null)"
 _ncyan="$(tput setaf 6 2> /dev/null)"
 _nwhite="$(tput setaf 7 2> /dev/null)"
+_bold="$(tput bold 2> /dev/null)"
 _sgr0="$(tput sgr0 2> /dev/null)"
 
 function show_rc {
@@ -37,5 +38,5 @@ function show_jobs {
     fi
 }
 
-PS1="\$(show_rc \$?)${_nblue}\t${_sgr0} · \u@\h$(show_distrobox) · \w\$(show_git_branch)\$(show_jobs)$_sgr0\n\$ "
+PS1="\$(show_rc \$?)${_nblue}${_bold}\t${_sgr0} · \u@\h$(show_distrobox) · \w\$(show_git_branch)\$(show_jobs)$_sgr0\n\$ "
 
